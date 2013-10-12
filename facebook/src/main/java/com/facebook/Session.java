@@ -884,6 +884,16 @@ public class Session implements Serializable {
         return session;
     }
 
+    public static Session openActiveSessionWithAccessToken(Context context, String appId,
+            AccessToken accessToken, StatusCallback callback) {
+        Session session = new Session(context, appId, null, false);
+
+        setActiveSession(session);
+        session.open(accessToken, callback);
+
+        return session;
+    }
+
     private static Session openActiveSession(Context context, boolean allowLoginUI, OpenRequest openRequest) {
         Session session = new Builder(context).build();
         if (SessionState.CREATED_TOKEN_LOADED.equals(session.getState()) || allowLoginUI) {

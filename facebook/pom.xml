@@ -8,7 +8,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.avianey</groupId>
     <artifactId>facebook-android-api</artifactId>
-    <version>3.5.2</version>
+    <version>3.5.2b</version>
     <packaging>apklib</packaging>
 
     <properties>
